@@ -8,4 +8,5 @@ RUN conda install --quiet --yes \
         redis \
         psycopg2 \
         mysql-connector-python \
+        records \
         sqlalchemy
