@@ -12,3 +12,6 @@ RUN conda install --quiet --yes \
         redis \
         sqlalchemy \
         ua-parser
+USER root
+RUN jupyter labextension install jupyterlab_bokeh
+USER $NB_UID
