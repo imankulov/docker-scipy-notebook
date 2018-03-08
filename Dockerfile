@@ -17,4 +17,9 @@ USER root
 RUN jupyter labextension install \
         jupyterlab_bokeh \
         bqplot
+RUN apt-get update && apt-get install -yq --no-install-recommends \
+        openssh-client \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
 USER $NB_UID
