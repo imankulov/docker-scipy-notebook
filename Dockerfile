@@ -13,6 +13,7 @@ RUN conda install --quiet --yes \
         sqlalchemy \
         python-dotenv \
         pandasql \
+        snakeviz \
         ua-parser
 USER root
 RUN jupyter labextension install \
