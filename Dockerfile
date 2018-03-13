@@ -12,6 +12,7 @@ RUN conda install --quiet --yes \
         redis \
         sqlalchemy \
         python-dotenv \
+        pandasql \
         ua-parser
 USER root
 RUN jupyter labextension install \
