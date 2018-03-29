@@ -14,12 +14,21 @@ RUN conda install --quiet --yes \
         python-dotenv \
         pandasql \
         snakeviz \
-        ua-parser
+        ua-parser \
+    && pip install geoip2
+
 USER root
-RUN jupyter labextension install \
+ADD http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz /usr/local/GeoLite2-City.tar.gz
+
+RUN \
+    ( cd /usr/local/ \
+        && tar xf /usr/local/GeoLite2-City.tar.gz \
+        && mv GeoLite2-City_* GeoLite2 \
+    ) \
+    && jupyter labextension install \
         jupyterlab_bokeh \
-        bqplot
-RUN apt-get update && apt-get install -yq --no-install-recommends \
+        bqplot \
+    && apt-get update && apt-get install -yq --no-install-recommends \
         openssh-client \
         less \
     && apt-get clean \
