@@ -13,6 +13,7 @@ RUN conda install --quiet --yes \
         sqlalchemy \
         python-dotenv \
         pandasql \
+        tqdm \
         snakeviz \
         ua-parser \
     && pip install geoip2
