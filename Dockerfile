@@ -28,6 +28,7 @@ RUN \
         && mv GeoLite2-City_* GeoLite2 \
     ) \
     && jupyter labextension install \
+        @jupyter-widgets/jupyterlab-manager \
         jupyterlab_bokeh \
         bqplot \
         qgrid \
