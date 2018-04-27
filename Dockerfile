@@ -16,6 +16,7 @@ RUN conda install --quiet --yes \
         tqdm \
         snakeviz \
         ua-parser \
+        qgrid \
     && pip install geoip2
 
 USER root
@@ -29,6 +30,7 @@ RUN \
     && jupyter labextension install \
         jupyterlab_bokeh \
         bqplot \
+        qgrid \
     && apt-get update && apt-get install -yq --no-install-recommends \
         openssh-client \
         less \
