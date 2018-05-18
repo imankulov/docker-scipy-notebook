@@ -17,6 +17,7 @@ RUN conda install --quiet --yes \
         snakeviz \
         ua-parser \
         qgrid \
+        plotly \
     && pip install geoip2
 
 USER root
