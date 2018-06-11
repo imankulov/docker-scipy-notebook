@@ -7,7 +7,6 @@ RUN conda install --quiet --yes \
         boto3 \
         mysql-connector-python \
         psycopg2 \
-        python-dotenv \
         records \
         redis \
         sqlalchemy \
@@ -18,6 +17,7 @@ RUN conda install --quiet --yes \
         ua-parser \
         qgrid \
         plotly \
+        yapf \
     && pip install geoip2
 
 USER root
