@@ -18,6 +18,7 @@ RUN conda install --quiet --yes \
         qgrid \
         plotly \
         yapf \
+        jupyterlab_templates \
     && pip install geoip2
 
 USER root
@@ -32,6 +33,8 @@ RUN \
         jupyterlab_bokeh \
         bqplot \
         qgrid \
+        jupyterlab_templates \
+    && jupyter serverextension enable --py jupyterlab_templates \
     && apt-get update && apt-get install -yq --no-install-recommends \
         openssh-client \
         less \
