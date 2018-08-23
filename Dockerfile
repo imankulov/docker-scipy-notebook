@@ -18,6 +18,7 @@ RUN conda install --quiet --yes \
         qgrid \
         plotly \
         yapf \
+        fs \
     && pip install geoip2
 
 USER root
