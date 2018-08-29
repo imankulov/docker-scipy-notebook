@@ -19,6 +19,7 @@ RUN conda install --quiet --yes \
         plotly \
         yapf \
         fs \
+        s3fs \
     && pip install geoip2
 
 USER root
