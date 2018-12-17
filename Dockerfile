@@ -21,7 +21,7 @@ RUN conda install --quiet --yes \
         fs \
         fs-s3fs \
         s3fs \
-    && pip install geoip2
+    && pip install geoip2 bitmapist4
 
 USER root
 ADD http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz /usr/local/GeoLite2-City.tar.gz
