@@ -18,6 +18,7 @@ RUN conda install --quiet --yes \
         qgrid \
         plotly \
         yapf \
+        appmode \
         fs \
         fs-s3fs \
         s3fs \
