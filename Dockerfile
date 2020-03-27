@@ -1,4 +1,4 @@
-FROM jupyter/scipy-notebook:latest
+FROM jupyter/datascience-notebook:latest
 LABEL maintainer="Roman Imankulov <roman.imankulov@gmail.com>"
 
 USER $NB_UID
