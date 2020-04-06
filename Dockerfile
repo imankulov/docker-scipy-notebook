@@ -18,6 +18,7 @@ RUN conda install --quiet --yes \
         fs \
         fs-s3fs \
         s3fs \
+        r-rmariadb \
     && pip install geoip2 bitmapist4 defusedxml
 
 USER root
