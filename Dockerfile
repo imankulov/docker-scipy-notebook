@@ -27,6 +27,7 @@ RUN \
     apt-get update && apt-get install -yq --no-install-recommends \
         openssh-client \
         less \
+        mysql-client \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 ENV EDITOR=vim
